@@ -8,7 +8,7 @@ let trackingLoop;
 async function getLocationDataAndPlaceISS(){
     try {
     // We are retrieving coordinates of ISS
-    const response = await fetch(iss_current_location_api, {
+    const response = await fetch('https://cors-anywhere.herokuapp.com/'+iss_current_location_api, {
         headers: { Origin: window.location.host }
       });
     const data = await response.json();
