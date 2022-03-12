@@ -27,7 +27,7 @@ startBtn.addEventListener("click", ()=>{
     }, 2000);
     setTimeout(() => {
         iss.hidden = false;
-    }, 2000);
+    }, 3000);
     startBtn.hidden = true;
     stopBtn.hidden = false;
 });
