@@ -8,7 +8,9 @@ let trackingLoop;
 async function getLocationDataAndPlaceISS(){
     try {
     // We are retrieving coordinates of ISS
-    const response = await fetch(iss_current_location_api);
+    const response = await fetch(iss_current_location_api, {
+        headers: { Origin: window.location.host }
+      });
     const data = await response.json();
     const latitude = data.iss_position.latitude;
     const longitude = data.iss_position.longitude;
